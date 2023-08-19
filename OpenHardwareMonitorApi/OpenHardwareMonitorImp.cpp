@@ -53,10 +53,10 @@ namespace OpenHardwareMonitorApi
 
     float COpenHardwareMonitor::GpuTemperature()
     {
-        if (m_gpu_nvidia_temperature >= 0)
-            return m_gpu_nvidia_temperature;
-        else if (m_gpu_ati_temperature >= 0)
+        if (m_gpu_ati_temperature >= 0)
             return m_gpu_ati_temperature;
+        else if (m_gpu_nvidia_temperature >= 0)
+            return m_gpu_nvidia_temperature;
         else
             return m_gpu_intel_temperature;
     }
@@ -73,10 +73,10 @@ namespace OpenHardwareMonitorApi
 
     float COpenHardwareMonitor::GpuUsage()
     {
-        if (m_gpu_nvidia_usage >= 0)
-            return m_gpu_nvidia_usage;
-        else if (m_gpu_ati_usage >= 0)
+        if (m_gpu_ati_usage >= 0)
             return m_gpu_ati_usage;
+        else if (m_gpu_nvidia_usage >= 0)
+            return m_gpu_nvidia_usage;
         else
             return m_gpu_intel_usage;
     }
